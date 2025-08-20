@@ -1,20 +1,20 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Deladem-Pascal",
+  lastName: "Akue",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Web Developer",
+  avatar: "/images/pascals-avatar.png",
+  email: "dpakue@gmail.com",
+  location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -30,17 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/dpakue",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/deladem-pascal-a-34051372/",
   },
   {
     name: "Email",
@@ -51,20 +46,20 @@ const social = [
 
 const home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/projects/project-01/next-js-portfolio-screenshot.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Developing integrated wesites with modern UI/UX</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Recent project: <strong className="ml-4">Theta Phi Alpha National Membership Site</strong></>,
+    href: "/work/Rebuilding-Theta-Phi-Alpha-an-SSO-Solution",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Pascal, a web developer at <a href={"https://thetaphialpha.org/"} style={{ display: "inline-flex", top: "0.25em", marginLeft: "0" }}> Theta Phi Alpha</a>. I specialize in
+      <br /> front end development and hone my skills by freelancing for small businesses and Non-Profits.
     </>
   ),
 };
@@ -83,81 +78,91 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/deladem-pascal-akue-2pb4pk/30min?overlayCalendar=true",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Hello! Welcome to my potfolio site. I go by Pascal. I am a seasoned Web Designer, Developer, CRM and Integrations Specialist with in-house, remote, and agency experience.
+I have full-stack experience designing and developing responsive and accessible websites and landing pages
+complimented by a background in web hosting, DNS and CDNs
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Recent Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Theta Phi Alpha",
+        timeframe: "2023 - Present",
+        role: "Web Developer, Technology Coordinator",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Redesigned the UI/UX of the national fraternity website and rebuilt it on WordPress, 
+            resulting in 73% faster load times, increased member utilization and staff productivity.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Implemented single sign on (SSO) to 4 client applications using OAuth / OpenID Connect (OIDC) 
+            and JSON Web Tokens (JWT).
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/project-01/theta-phi.jpg",
+            alt: "Theta Phi Alpha Fraternity Staff",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "URBANE Strategies",
+        timeframe: "2017 - Present",
+        role: "Freelance Web Designer/Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed over 2 dozen websites in fields including Real Estate, Promotional Products, 
+            Printing services, Music, Education, Accounting, Non-Profits / NGO’s, and Automotive sales and repair. 
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Led project management for multiple development projects, coordinating 3rd party vendors and contractors.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/project-01/bimmer-motors-demos.jpg",
+            alt: "Urbane Strategies client, Bimmer Motors",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Stony Brook University",
+        description: <>Bachelors Degree - Health Science.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "W3Schools",
+        description: <>Studied HTML, PHP, MySQL, Javascript, jQuery, JSON, AJAX, CSS, SCSS.</>,
+      },
+      {
+        name: "Udemy",
+        description: <>Studied React.js, Git, SEO </>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
@@ -199,7 +204,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "FAQ's and Professional Views...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
