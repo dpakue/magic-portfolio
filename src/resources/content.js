@@ -85,9 +85,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Hello! Welcome to my potfolio site. I go by Pascal. I am a seasoned Web Designer, Developer, CRM and Integrations Specialist with in-house, remote, and agency experience.
+        Hello! I go by Pascal. I am a seasoned Web Designer, Developer, CRM and Integrations Specialist with in-house, remote, and agency experience.
 I have full-stack experience designing and developing responsive and accessible websites and landing pages
-complimented by a background in web hosting, DNS and CDNs
+complimented by a background in web hosting and database management.
       </>
     ),
   },
@@ -125,7 +125,7 @@ complimented by a background in web hosting, DNS and CDNs
         role: "Freelance Web Designer/Developer",
         achievements: [
           <>
-            Developed over 2 dozen websites in fields including Real Estate, Promotional Products, 
+            Developement work on over 2 dozen websites in fields including Real Estate, Promotional Products, 
             Printing services, Music, Education, Accounting, Non-Profits / NGO’s, and Automotive sales and repair. 
           </>,
           <>
