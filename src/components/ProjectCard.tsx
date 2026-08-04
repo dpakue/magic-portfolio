@@ -32,13 +32,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Column fillWidth gap="m">
+      <a href={link}>
       <Carousel
         sizes="(max-width: 960px) 100vw, 960px"
         items={images.map((image) => ({
           slide: image,
           alt: title,
         }))}
+        controls={false}
       />
+      </a>
       <Flex
         mobileDirection="column"
         fillWidth
@@ -58,7 +61,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <Column flex={7} gap="16">
             {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
             {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+              <Text wrap="balance" variant="body-default-l" onBackground="neutral-weak">
                 {description}
               </Text>
             )}
@@ -68,8 +71,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   suffixIcon="arrowRight"
                   style={{ margin: "0", width: "fit-content" }}
                   href={href}
+                  iconSize="l"
                 >
-                  <Text variant="body-default-s">Read case study</Text>
+                  <Text variant="body-strong-xl">Read project summary</Text>
                 </SmartLink>
               )}
               {link && (
@@ -77,8 +81,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: "0", width: "fit-content" }}
                   href={link}
+                  iconSize="l"
                 >
-                  <Text variant="body-default-s">View project</Text>
+                  <Text variant="body-strong-xl">Visit website</Text>
                 </SmartLink>
               )}
             </Flex>

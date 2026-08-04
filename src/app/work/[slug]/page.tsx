@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
 import { getPosts } from "@/utils/utils";
-import { Meta, Schema, AvatarGroup, Button, Column, Flex, Heading, Media, Text } from "@once-ui-system/core";
+import { Meta, Schema, AvatarGroup, Button, Column, Flex, Heading, Media, Text, SmartLink, User } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
+
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "work", "projects"]);
@@ -86,14 +87,30 @@ export default async function Project({
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <Flex gap="12" marginBottom="24" vertical="center">
-          {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m" />}
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
-          </Text>
+
+          <User 
+          name="Pascal"
+          subline="Web Developer"
+          avatarProps={{src: "/images/pascals-avatar.png" }}
+          />
         </Flex>
         <CustomMDX source={post.content} />
+        
+
       </Column>
+
+          <Column gap="m">
+                <SmartLink
+                  suffixIcon="arrowUpRightFromSquare"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={post.metadata.link}
+                  iconSize="l"
+                >
+                  <Text variant="body-strong-xl">Visit website</Text>
+                </SmartLink>
+    </Column>
       <ScrollToHash />
     </Column>
   );
 }
+
